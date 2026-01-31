@@ -26,10 +26,6 @@ jobs:
       - name: Build
         run: ./build.sh
 
-      - name: Package
-        run: |
-          tar -czf arm_wizard_linux_x86_64.tar.gz -C dist arm_wizard
-
       - name: Publish Release
         uses: ncipollo/release-action@v1
         with:
@@ -37,5 +33,6 @@ jobs:
           name: Continuous Release
           allowUpdates: true
           replacesArtifacts: true
-          artifacts: arm_wizard_linux_x86_64.tar.gz
+          artifacts: dist/arm_wizard
+          artifactContentType: application/octet-stream
           generateReleaseNotes: true
