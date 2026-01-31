@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev pkg-config
+
+      - name: Build
+        run: ./build.sh
+
+      - name: Package
+        run: |
+          tar -czf arm_wizard_linux_x86_64.tar.gz -C dist arm_wizard
+
+      - name: Publish Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: latest
+          name: Continuous Release
+          allowUpdates: true
+          replacesArtifacts: true
+          artifacts: arm_wizard_linux_x86_64.tar.gz
+          generateReleaseNotes: true
