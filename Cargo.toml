@@ -1,0 +1,19 @@
+[package]
+name = "arm_wizard"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "arm_wizard"
+path = "src/main.rs"
+
+[dependencies]
+gtk = "0.18"
+serde_yaml = "0.9"
+walkdir = "2"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true

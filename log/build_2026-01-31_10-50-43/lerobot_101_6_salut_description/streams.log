@@ -1,0 +1,54 @@
+[0.647s] Invoking command in '/home/bogda/Documents/Projects/arm_wizard/example/lerobot_101_6_salut/lerobot_101_6_salut_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/lerobot_101_6_salut_description build --build-base /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build install --record /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/install.log --single-version-externally-managed install_data
+[0.837s] running egg_info
+[0.838s] creating ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info
+[0.849s] writing ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/PKG-INFO
+[0.850s] writing dependency_links to ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/dependency_links.txt
+[0.850s] writing requirements to ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/requires.txt
+[0.850s] writing top-level names to ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/top_level.txt
+[0.850s] writing manifest file '../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'
+[0.875s] reading manifest file '../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'
+[0.876s] writing manifest file '../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'
+[0.876s] running build
+[0.877s] running build_py
+[0.877s] creating /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build
+[0.877s] creating /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib
+[0.877s] creating /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description
+[0.877s] copying lerobot_101_6_salut_description/__init__.py -> /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description
+[0.877s] running install
+[0.883s] running install_lib
+[0.895s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description
+[0.896s] copying /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description/__init__.py -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description
+[0.896s] byte-compiling /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description/__init__.py to __init__.cpython-312.pyc
+[0.896s] running install_data
+[0.897s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index
+[0.897s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index/resource_index
+[0.897s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages
+[0.897s] copying resource/lerobot_101_6_salut_description -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages
+[0.897s] copying package.xml -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description
+[0.898s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch
+[0.898s] copying launch/display.launch.py -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch
+[0.898s] copying launch/gazebo.launch.py -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch
+[0.898s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+[0.898s] copying urdf/materials.xacro -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+[0.898s] copying urdf/lerobot_101_6_salut.gazebo -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+[0.899s] copying urdf/lerobot_101_6_salut.xacro -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+[0.899s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.899s] copying meshes/5_to_6_axis_v12_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.900s] copying meshes/Upper_arm_SO101_v5_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.902s] copying meshes/Rotation_Pitch_SO101_v7_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.903s] copying meshes/Wrist_Roll_Follower_SO101_v3_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.905s] copying meshes/Camera_mount_v19_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.905s] copying meshes/Under_arm_SO101_v4_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.906s] copying meshes/Moving_Jaw_SO101_v1_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.907s] copying meshes/Wrist_Roll_Pitch_SO101_v3_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.909s] copying meshes/camera_lens_v1_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.909s] copying meshes/base_link.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+[0.910s] creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+[0.911s] copying config/ros_gz_bridge_gazebo.yaml -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+[0.911s] copying config/display.rviz -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+[0.911s] copying config/gazebo.rviz -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+[0.911s] running install_egg_info
+[0.924s] Copying ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info to /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description-0.0.0-py3.12.egg-info
+[0.925s] running install_scripts
+[1.026s] writing list of installed files to '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/install.log'
+[1.052s] Invoked command in '/home/bogda/Documents/Projects/arm_wizard/example/lerobot_101_6_salut/lerobot_101_6_salut_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/lerobot_101_6_salut_description build --build-base /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build install --record /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/install.log --single-version-externally-managed install_data

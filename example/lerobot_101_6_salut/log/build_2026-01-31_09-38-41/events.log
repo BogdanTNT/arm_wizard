@@ -1,0 +1,76 @@
+[0.000000] (-) TimerEvent: {}
+[0.000290] (-) JobUnselected: {'identifier': 'lerobot_101_6_salut_play'}
+[0.000500] (lerobot_101_6_salut_description) JobQueued: {'identifier': 'lerobot_101_6_salut_description', 'dependencies': OrderedDict()}
+[0.001015] (lerobot_101_6_salut_description) JobStarted: {'identifier': 'lerobot_101_6_salut_description'}
+[0.098989] (-) TimerEvent: {}
+[0.199844] (-) TimerEvent: {}
+[0.300494] (-) TimerEvent: {}
+[0.400963] (-) TimerEvent: {}
+[0.501721] (-) TimerEvent: {}
+[0.602812] (-) TimerEvent: {}
+[0.703706] (-) TimerEvent: {}
+[0.738802] (lerobot_101_6_salut_description) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/lerobot_101_6_salut_description', 'build', '--build-base', '/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build', 'install', '--record', '/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/lerobot_101_6_salut_description', 'env': {'USER': 'bogda', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '0', 'HOME': '/home/bogda', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'MANAGERPID': '1911', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'SYSTEMD_EXEC_PID': '2092', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=da7cc97a7443702f2e748ca2697d9a76', 'DBUS_STARTER_BUS_TYPE': 'session', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '23238', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'bogda', 'JOURNAL_STREAM': '9:27368', '_': '/usr/bin/gnome-session', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'bogda', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/bogda-VMware-Virtual-Platform:@/tmp/.ICE-unix/2092,unix/bogda-VMware-Virtual-Platform:/tmp/.ICE-unix/2092', 'INVOCATION_ID': 'f62d687f9eb542b8afed89fc2f51bb49', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_MENU_PREFIX': 'gnome-', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.JQ6VJ3', 'XDG_SESSION_DESKTOP': 'ubuntu', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'QT_IM_MODULE': 'ibus', 'LC_ALL': 'en_US.UTF-8', 'PWD': '/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=da7cc97a7443702f2e748ca2697d9a76', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PYTHONPATH': '/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages:'}, 'shell': False}
+[0.804562] (-) TimerEvent: {}
+[0.905048] (-) TimerEvent: {}
+[0.962175] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running egg_info\n'}
+[0.963970] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info\n'}
+[0.975364] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/PKG-INFO\n'}
+[0.980351] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing dependency_links to ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/dependency_links.txt\n'}
+[0.982307] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing requirements to ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/requires.txt\n'}
+[0.984651] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing top-level names to ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/top_level.txt\n'}
+[0.987411] (lerobot_101_6_salut_description) StdoutLine: {'line': b"writing manifest file '../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'\n"}
+[1.005686] (-) TimerEvent: {}
+[1.027190] (lerobot_101_6_salut_description) StdoutLine: {'line': b"reading manifest file '../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'\n"}
+[1.031673] (lerobot_101_6_salut_description) StdoutLine: {'line': b"writing manifest file '../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'\n"}
+[1.034564] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running build\n'}
+[1.036065] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running build_py\n'}
+[1.037415] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build\n'}
+[1.039267] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib\n'}
+[1.040348] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description\n'}
+[1.042653] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying lerobot_101_6_salut_description/__init__.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description\n'}
+[1.043432] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install\n'}
+[1.048447] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_lib\n'}
+[1.062956] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description\n'}
+[1.064456] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description/__init__.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description\n'}
+[1.068547] (lerobot_101_6_salut_description) StdoutLine: {'line': b'byte-compiling /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description/__init__.py to __init__.cpython-312.pyc\n'}
+[1.074438] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_data\n'}
+[1.075657] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index\n'}
+[1.077398] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index/resource_index\n'}
+[1.078818] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages\n'}
+[1.080416] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying resource/lerobot_101_6_salut_description -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages\n'}
+[1.081883] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying package.xml -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description\n'}
+[1.086596] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch\n'}
+[1.088097] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying launch/display.launch.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch\n'}
+[1.093370] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying launch/gazebo.launch.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch\n'}
+[1.098799] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[1.100291] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying urdf/lerobot_101_6_salut.gazebo -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[1.104713] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying urdf/lerobot_101_6_salut.xacro -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[1.106004] (-) TimerEvent: {}
+[1.109832] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying urdf/materials.xacro -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[1.114772] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.120229] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/5_to_6_axis_v12_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.147899] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/base_link.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.170069] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/camera_lens_v1_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.177266] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Camera_mount_v19_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.186366] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Moving_Jaw_SO101_v1_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.200960] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Rotation_Pitch_SO101_v7_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.206272] (-) TimerEvent: {}
+[1.222191] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Under_arm_SO101_v4_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.244848] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Upper_arm_SO101_v5_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.265948] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Wrist_Roll_Follower_SO101_v3_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.292307] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Wrist_Roll_Pitch_SO101_v3_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[1.307413] (-) TimerEvent: {}
+[1.325169] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[1.326728] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying config/display.rviz -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[1.332715] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying config/gazebo.rviz -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[1.338776] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying config/ros_gz_bridge_gazebo.yaml -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[1.343630] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.359214] (lerobot_101_6_salut_description) StdoutLine: {'line': b'Copying ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info to /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description-0.0.0-py3.12.egg-info\n'}
+[1.391739] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_scripts\n'}
+[1.407976] (-) TimerEvent: {}
+[1.508853] (-) TimerEvent: {}
+[1.510451] (lerobot_101_6_salut_description) StdoutLine: {'line': b"writing list of installed files to '/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/install.log'\n"}
+[1.536049] (lerobot_101_6_salut_description) CommandEnded: {'returncode': 0}
+[1.609233] (-) TimerEvent: {}
+[1.631187] (lerobot_101_6_salut_description) JobEnded: {'identifier': 'lerobot_101_6_salut_description', 'rc': 0}
+[1.640520] (-) EventReactorShutdown: {}

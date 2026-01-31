@@ -1,0 +1,52 @@
+running egg_info
+creating ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info
+writing ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/PKG-INFO
+writing dependency_links to ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/dependency_links.txt
+writing requirements to ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/requires.txt
+writing top-level names to ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/top_level.txt
+writing manifest file '../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'
+reading manifest file '../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'
+writing manifest file '../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description
+copying lerobot_101_6_salut_description/__init__.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description
+running install
+running install_lib
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description
+copying /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description/__init__.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description
+byte-compiling /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index/resource_index
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages
+copying resource/lerobot_101_6_salut_description -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages
+copying package.xml -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch
+copying launch/display.launch.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch
+copying launch/gazebo.launch.py -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+copying urdf/lerobot_101_6_salut.gazebo -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+copying urdf/lerobot_101_6_salut.xacro -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+copying urdf/materials.xacro -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/5_to_6_axis_v12_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/base_link.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/camera_lens_v1_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/Camera_mount_v19_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/Moving_Jaw_SO101_v1_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/Rotation_Pitch_SO101_v7_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/Under_arm_SO101_v4_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/Upper_arm_SO101_v5_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/Wrist_Roll_Follower_SO101_v3_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+copying meshes/Wrist_Roll_Pitch_SO101_v3_1.stl -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes
+creating /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+copying config/display.rviz -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+copying config/gazebo.rviz -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+copying config/ros_gz_bridge_gazebo.yaml -> /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config
+running install_egg_info
+Copying ../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info to /mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/mnt/hgfs/sharedprj/test_export/lerobot_101_6_salut/build/lerobot_101_6_salut_description/install.log'

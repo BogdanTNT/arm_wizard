@@ -1,0 +1,20 @@
+[0.008s] Invoking command in '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_moveit_config': AMENT_PREFIX_PATH=/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages /usr/bin/cmake /home/bogda/Documents/Projects/arm_wizard/example/lerobot_101_6_salut/lerobot_101_6_salut_moveit_config -DCMAKE_INSTALL_PREFIX=/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_moveit_config
+[0.031s] CMake Error at CMakeLists.txt:4 (find_package):
+[0.031s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.031s]   has asked CMake to find a package configuration file provided by
+[0.031s]   "ament_cmake", but CMake did not find one.
+[0.032s] 
+[0.032s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.032s]   any of the following names:
+[0.032s] 
+[0.032s]     ament_cmakeConfig.cmake
+[0.032s]     ament_cmake-config.cmake
+[0.032s] 
+[0.032s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.032s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.032s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.032s]   has been installed.
+[0.032s] 
+[0.032s] 
+[0.033s] -- Configuring incomplete, errors occurred!
+[0.034s] Invoked command in '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_moveit_config' returned '1': AMENT_PREFIX_PATH=/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages /usr/bin/cmake /home/bogda/Documents/Projects/arm_wizard/example/lerobot_101_6_salut/lerobot_101_6_salut_moveit_config -DCMAKE_INSTALL_PREFIX=/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_moveit_config

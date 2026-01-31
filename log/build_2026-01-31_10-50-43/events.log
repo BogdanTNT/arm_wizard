@@ -1,0 +1,112 @@
+[0.000000] (-) TimerEvent: {}
+[0.000519] (lerobot_101_6_salut_description) JobQueued: {'identifier': 'lerobot_101_6_salut_description', 'dependencies': OrderedDict()}
+[0.000604] (lerobot_101_6_salut_moveit_config) JobQueued: {'identifier': 'lerobot_101_6_salut_moveit_config', 'dependencies': OrderedDict({'lerobot_101_6_salut_description': '/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description'})}
+[0.000648] (lerobot_101_6_salut_play) JobQueued: {'identifier': 'lerobot_101_6_salut_play', 'dependencies': OrderedDict({'lerobot_101_6_salut_description': '/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description', 'lerobot_101_6_salut_moveit_config': '/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_moveit_config'})}
+[0.000688] (lerobot_101_6_salut_description) JobStarted: {'identifier': 'lerobot_101_6_salut_description'}
+[0.099789] (-) TimerEvent: {}
+[0.200082] (-) TimerEvent: {}
+[0.300569] (-) TimerEvent: {}
+[0.401141] (-) TimerEvent: {}
+[0.502092] (-) TimerEvent: {}
+[0.602617] (-) TimerEvent: {}
+[0.646752] (lerobot_101_6_salut_description) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../../build/lerobot_101_6_salut_description', 'build', '--build-base', '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build', 'install', '--record', '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/bogda/Documents/Projects/arm_wizard/example/lerobot_101_6_salut/lerobot_101_6_salut_description', 'env': {'USER': 'bogda', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '0', 'HOME': '/home/bogda', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'MANAGERPID': '1911', 'TRIGGER_PATH': '/var/crash', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'SYSTEMD_EXEC_PID': '25716', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '29669', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'bogda', '_': '/usr/bin/gnome-session', 'JOURNAL_STREAM': '9:198590', 'XDG_SESSION_CLASS': 'user', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/update-notifier-crash.service/memory.pressure', 'USERNAME': 'bogda', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/bogda-VMware-Virtual-Platform:@/tmp/.ICE-unix/2092,unix/bogda-VMware-Virtual-Platform:/tmp/.ICE-unix/2092', 'INVOCATION_ID': '9d0d6b91ad344d5ba7b6b18ba2dfc2fd', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_MENU_PREFIX': 'gnome-', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.JQ6VJ3', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XMODIFIERS': '@im=ibus', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'TRIGGER_UNIT': 'update-notifier-crash.path', 'QT_IM_MODULE': 'ibus', 'LC_ALL': 'en_US.UTF-8', 'PWD': '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'PYTHONPATH': '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages:'}, 'shell': False}
+[0.703174] (-) TimerEvent: {}
+[0.803980] (-) TimerEvent: {}
+[0.837972] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running egg_info\n'}
+[0.838300] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info\n'}
+[0.849507] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/PKG-INFO\n'}
+[0.849978] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing dependency_links to ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/dependency_links.txt\n'}
+[0.850268] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing requirements to ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/requires.txt\n'}
+[0.850563] (lerobot_101_6_salut_description) StdoutLine: {'line': b'writing top-level names to ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/top_level.txt\n'}
+[0.850719] (lerobot_101_6_salut_description) StdoutLine: {'line': b"writing manifest file '../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'\n"}
+[0.875723] (lerobot_101_6_salut_description) StdoutLine: {'line': b"reading manifest file '../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'\n"}
+[0.876329] (lerobot_101_6_salut_description) StdoutLine: {'line': b"writing manifest file '../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info/SOURCES.txt'\n"}
+[0.876743] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running build\n'}
+[0.877033] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running build_py\n'}
+[0.877264] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build\n'}
+[0.877401] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib\n'}
+[0.877635] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description\n'}
+[0.877788] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying lerobot_101_6_salut_description/__init__.py -> /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description\n'}
+[0.877916] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install\n'}
+[0.883058] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_lib\n'}
+[0.895941] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description\n'}
+[0.896239] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying /home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/build/lib/lerobot_101_6_salut_description/__init__.py -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description\n'}
+[0.896696] (lerobot_101_6_salut_description) StdoutLine: {'line': b'byte-compiling /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description/__init__.py to __init__.cpython-312.pyc\n'}
+[0.897012] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_data\n'}
+[0.897225] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index\n'}
+[0.897530] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index/resource_index\n'}
+[0.897668] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages\n'}
+[0.897877] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying resource/lerobot_101_6_salut_description -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/ament_index/resource_index/packages\n'}
+[0.897995] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying package.xml -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description\n'}
+[0.898150] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch\n'}
+[0.898422] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying launch/display.launch.py -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch\n'}
+[0.898623] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying launch/gazebo.launch.py -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/launch\n'}
+[0.898749] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[0.898885] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying urdf/materials.xacro -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[0.898985] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying urdf/lerobot_101_6_salut.gazebo -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[0.899217] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying urdf/lerobot_101_6_salut.xacro -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/urdf\n'}
+[0.899363] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.899606] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/5_to_6_axis_v12_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.900787] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Upper_arm_SO101_v5_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.902152] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Rotation_Pitch_SO101_v7_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.903626] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Wrist_Roll_Follower_SO101_v3_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.904154] (-) TimerEvent: {}
+[0.905298] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Camera_mount_v19_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.905569] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Under_arm_SO101_v4_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.907044] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Moving_Jaw_SO101_v1_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.907578] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/Wrist_Roll_Pitch_SO101_v3_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.909248] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/camera_lens_v1_1.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.909536] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying meshes/base_link.stl -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/meshes\n'}
+[0.910846] (lerobot_101_6_salut_description) StdoutLine: {'line': b'creating /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[0.911195] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying config/ros_gz_bridge_gazebo.yaml -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[0.911384] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying config/display.rviz -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[0.911476] (lerobot_101_6_salut_description) StdoutLine: {'line': b'copying config/gazebo.rviz -> /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/share/lerobot_101_6_salut_description/config\n'}
+[0.911789] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.924993] (lerobot_101_6_salut_description) StdoutLine: {'line': b'Copying ../../../build/lerobot_101_6_salut_description/lerobot_101_6_salut_description.egg-info to /home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages/lerobot_101_6_salut_description-0.0.0-py3.12.egg-info\n'}
+[0.926094] (lerobot_101_6_salut_description) StdoutLine: {'line': b'running install_scripts\n'}
+[1.004383] (-) TimerEvent: {}
+[1.026482] (lerobot_101_6_salut_description) StdoutLine: {'line': b"writing list of installed files to '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_description/install.log'\n"}
+[1.051804] (lerobot_101_6_salut_description) CommandEnded: {'returncode': 0}
+[1.062640] (lerobot_101_6_salut_description) JobEnded: {'identifier': 'lerobot_101_6_salut_description', 'rc': 0}
+[1.063852] (lerobot_101_6_salut_moveit_config) JobStarted: {'identifier': 'lerobot_101_6_salut_moveit_config'}
+[1.068969] (lerobot_101_6_salut_moveit_config) JobProgress: {'identifier': 'lerobot_101_6_salut_moveit_config', 'progress': 'cmake'}
+[1.069986] (lerobot_101_6_salut_moveit_config) Command: {'cmd': ['/usr/bin/cmake', '/home/bogda/Documents/Projects/arm_wizard/example/lerobot_101_6_salut/lerobot_101_6_salut_moveit_config', '-DCMAKE_INSTALL_PREFIX=/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_moveit_config'], 'cwd': '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_moveit_config', 'env': OrderedDict({'USER': 'bogda', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '0', 'HOME': '/home/bogda', 'DESKTOP_SESSION': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'MANAGERPID': '1911', 'TRIGGER_PATH': '/var/crash', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'SYSTEMD_EXEC_PID': '25716', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '29669', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'bogda', '_': '/usr/bin/gnome-session', 'JOURNAL_STREAM': '9:198590', 'XDG_SESSION_CLASS': 'user', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/update-notifier-crash.service/memory.pressure', 'USERNAME': 'bogda', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/bogda-VMware-Virtual-Platform:@/tmp/.ICE-unix/2092,unix/bogda-VMware-Virtual-Platform:/tmp/.ICE-unix/2092', 'INVOCATION_ID': '9d0d6b91ad344d5ba7b6b18ba2dfc2fd', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_MENU_PREFIX': 'gnome-', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.JQ6VJ3', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XMODIFIERS': '@im=ibus', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'TRIGGER_UNIT': 'update-notifier-crash.path', 'QT_IM_MODULE': 'ibus', 'LC_ALL': 'en_US.UTF-8', 'PWD': '/home/bogda/Documents/Projects/arm_wizard/build/lerobot_101_6_salut_moveit_config', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'PYTHONPATH': '/home/bogda/Documents/Projects/arm_wizard/install/lerobot_101_6_salut_description/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA='}), 'shell': False}
+[1.104739] (-) TimerEvent: {}
+[1.130360] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[1.194465] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.204996] (-) TimerEvent: {}
+[1.212920] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.305456] (-) TimerEvent: {}
+[1.314795] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.324463] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.324860] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.325114] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.336019] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.405853] (-) TimerEvent: {}
+[1.457499] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.466385] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.466900] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.467273] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.479015] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'CMake Error at CMakeLists.txt:4 (find_package):\n'}
+[1.479167] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[1.479248] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[1.479310] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[1.479363] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'\n'}
+[1.479416] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[1.479475] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  any of the following names:\n'}
+[1.479529] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'\n'}
+[1.479585] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[1.479640] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[1.479703] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'\n'}
+[1.479890] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[1.479991] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[1.480064] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[1.480123] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'  has been installed.\n'}
+[1.480183] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'\n'}
+[1.480242] (lerobot_101_6_salut_moveit_config) StderrLine: {'line': b'\n'}
+[1.480297] (lerobot_101_6_salut_moveit_config) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.483272] (lerobot_101_6_salut_moveit_config) CommandEnded: {'returncode': 1}
+[1.502261] (lerobot_101_6_salut_moveit_config) JobEnded: {'identifier': 'lerobot_101_6_salut_moveit_config', 'rc': 1}
+[1.506063] (-) TimerEvent: {}
+[1.513152] (lerobot_101_6_salut_play) JobSkipped: {'identifier': 'lerobot_101_6_salut_play'}
+[1.513194] (-) EventReactorShutdown: {}
