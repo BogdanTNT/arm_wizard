@@ -1,12 +1,12 @@
-# 🤖 ARM Wizard
+# ARM Wizard
 
 A native GTK GUI application for configuring robot arm packages in ROS2 workspaces. **Builds in seconds, runs instantly!**
 
 ## What it does
 
-- ✓ Builds your workspace (skipping MoveIt config packages)
-- ✓ Launches MoveIt Setup Assistant (auto-sources ROS 2)
-- ✓ Copies MoveIt config into your play overlay and patches:
+- Builds your workspace (skipping MoveIt config packages)
+- Launches MoveIt Setup Assistant (auto-sources ROS 2)
+- Copies MoveIt config into your play overlay and patches:
   - `joint_limits.yaml` (acceleration = velocity, floats, limits enabled)
   - controller YAML (adds `action_ns`, sets default on `arm_controller`)
 
@@ -53,13 +53,13 @@ The executable will be created at: `dist/arm_wizard`
 
 ```
 arm_wizard/
-├── src/main.rs           # Rust source code
-├── Cargo.toml            # Dependencies (gtk, serde_yaml, walkdir)
-├── Cargo.lock            # Locked dependency versions
-├── build.sh              # Build script
-├── dist/arm_wizard       # Compiled binary
-├── arm_wizard.sh         # Bash version (for reference)
-└── README.md             # This file
+|-- src/main.rs           # Rust source code
+|-- Cargo.toml            # Dependencies (gtk, serde_yaml, walkdir)
+|-- Cargo.lock            # Locked dependency versions
+|-- build.sh              # Build script
+|-- dist/arm_wizard       # Compiled binary
+|-- arm_wizard.sh         # Bash version (for reference)
+`-- README.md             # This file
 ```
 
 ## Technical Details

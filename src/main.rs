@@ -30,7 +30,7 @@ fn main() {
 fn build_ui(app: &Application) {
     let window = ApplicationWindow::builder()
         .application(app)
-        .title("🤖 ARM Wizard")
+        .title("ARM Wizard")
         .default_width(700)
         .default_height(600)
         .build();
@@ -41,7 +41,7 @@ fn build_ui(app: &Application) {
     main_box.set_margin_start(15);
     main_box.set_margin_end(15);
 
-    let title = Label::new(Some("🤖 ARM Wizard"));
+    let title = Label::new(Some("ARM Wizard"));
     main_box.pack_start(&title, false, false, 0);
 
     let subtitle = Label::new(Some("Robot Arm Configuration Helper"));
@@ -144,7 +144,7 @@ fn build_ui(app: &Application) {
     let btn_box = GtkBox::new(Orientation::Horizontal, 10);
     btn_box.set_halign(gtk::Align::Center);
 
-    let run_btn = Button::with_label("▶ Run All Steps");
+    let run_btn = Button::with_label("Run All Steps");
     let clear_btn = Button::with_label("Clear Log");
 
     btn_box.pack_start(&run_btn, false, false, 0);
@@ -200,28 +200,28 @@ fn get_default_workspace() -> Option<PathBuf> {
 fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
     clear_log(log_tx);
     
-    send_log(log_tx, "🔍 Finding project folder...\n");
+    send_log(log_tx, "Finding project folder...\n");
     let project_folder = match workspace {
         Some(ws) => ws,
         None => {
-            send_log(log_tx, "❌ No project folder selected!\n");
+            send_log(log_tx, "ERROR: No project folder selected!\n");
             send_log(log_tx, "   Please select a project folder using the Browse button.\n");
             return;
         }
     };
-    send_log(log_tx, &format!("✓ Project folder: {}\n", project_folder.display()));
+    send_log(log_tx, &format!("OK: Project folder: {}\n", project_folder.display()));
     let build_root = project_folder
         .parent()
         .map(|p| p.to_path_buf())
         .unwrap_or_else(|| project_folder.clone());
     if build_root == project_folder {
-        send_log(log_tx, "⚠ Could not determine parent folder; using project folder as build root.\n");
+        send_log(log_tx, "WARN: Could not determine parent folder; using project folder as build root.\n");
     }
-    send_log(log_tx, &format!("✓ Build root: {}\n\n", build_root.display()));
+    send_log(log_tx, &format!("OK: Build root: {}\n\n", build_root.display()));
 
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+    send_log(log_tx, "----------------------------------------\n");
     send_log(log_tx, "  STEP 1: Build Project\n");
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n");
+    send_log(log_tx, "----------------------------------------\n\n");
     send_log(log_tx, "  Building...\n");
     
     let mut cmd = Command::new("colcon");
@@ -238,10 +238,10 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
     }
     match run_command_streaming(log_tx, cmd) {
         Ok(()) => {
-            send_log(log_tx, "✓ Build successful!\n\n");
+            send_log(log_tx, "OK: Build successful!\n\n");
         }
         Err(e) => {
-            send_log(log_tx, "❌ Build failed:\n");
+            send_log(log_tx, "ERROR: Build failed:\n");
             send_log(log_tx, &format!("{}\n\n", e));
             return;
         }
@@ -255,25 +255,25 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
         cmd.arg("build.sh").current_dir(&project_folder);
         match run_command_streaming(log_tx, cmd) {
             Ok(()) => {
-                send_log(log_tx, "✓ build.sh completed successfully.\n\n");
+                send_log(log_tx, "OK: build.sh completed successfully.\n\n");
             }
             Err(e) => {
-                send_log(log_tx, "❌ build.sh failed:\n");
+                send_log(log_tx, "ERROR: build.sh failed:\n");
                 send_log(log_tx, &format!("{}\n\n", e));
                 return;
             }
         }
     } else {
-        send_log(log_tx, "ℹ build.sh not found in project folder. Skipping compilation check.\n\n");
+        send_log(log_tx, "INFO: build.sh not found in project folder. Skipping compilation check.\n\n");
     }
 
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+    send_log(log_tx, "----------------------------------------\n");
     send_log(log_tx, "  STEP 2: MoveIt Setup Assistant\n");
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n");
+    send_log(log_tx, "----------------------------------------\n\n");
     send_log(log_tx, "  Sourcing ROS environment...\n");
     let candidates = ros_env_candidates();
     if candidates.is_empty() {
-        send_log(log_tx, "❌ No ROS 2 setup found.\n");
+        send_log(log_tx, "ERROR: No ROS 2 setup found.\n");
         send_log(log_tx, "   Please install ROS 2 Jazzy or Humble and source it:\n");
         send_log(log_tx, "     source /opt/ros/jazzy/setup.bash\n");
         send_log(log_tx, "     # or\n");
@@ -283,11 +283,11 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
 
     if let Ok(distro) = std::env::var("ROS_DISTRO") {
         if !candidates.iter().any(|c| c.distro == distro) {
-            send_log(log_tx, &format!("⚠ ROS_DISTRO is set to '{}', but /opt/ros/{}/setup.bash not found.\n", distro, distro));
+            send_log(log_tx, &format!("WARN: ROS_DISTRO is set to '{}', but /opt/ros/{}/setup.bash not found.\n", distro, distro));
             send_log(log_tx, "  Falling back to available ROS 2 installs (jazzy/humble).\n");
         }
     } else {
-        send_log(log_tx, "ℹ ROS_DISTRO not set; probing jazzy and humble.\n");
+        send_log(log_tx, "INFO: ROS_DISTRO not set; probing jazzy and humble.\n");
     }
 
     let mut chosen: Option<RosEnv> = None;
@@ -304,20 +304,20 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
                 }
             }
             Err(e) => {
-                send_log(log_tx, &format!("⚠ Error checking MoveIt for {}: {}\n", env.distro, e));
+                send_log(log_tx, &format!("WARN: Error checking MoveIt for {}: {}\n", env.distro, e));
             }
         }
     }
 
     if chosen.is_none() {
         if !ros2_found_any {
-            send_log(log_tx, "❌ ros2 command not found after sourcing available ROS installs.\n");
+            send_log(log_tx, "ERROR: ros2 command not found after sourcing available ROS installs.\n");
             send_log(log_tx, "   Please install ROS 2 and source it before running this wizard.\n\n");
             return;
         }
 
         let install_env = candidates[0].clone();
-        send_log(log_tx, &format!("⚠ MoveIt Setup Assistant not found for ROS 2 {}.\n", install_env.distro));
+        send_log(log_tx, &format!("WARN: MoveIt Setup Assistant not found for ROS 2 {}.\n", install_env.distro));
         send_log(log_tx, "   Install with:\n");
         send_log(log_tx, &format!("     sudo apt install ros-{}-moveit-setup-assistant\n", install_env.distro));
         send_log(log_tx, "   This will ask for your sudo password in the terminal.\n\n");
@@ -341,18 +341,18 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
             ))
             .current_dir(&build_root);
         if let Err(e) = run_command_streaming(log_tx, install_cmd) {
-            send_log(log_tx, &format!("❌ Install failed: {}\n", e));
+            send_log(log_tx, &format!("ERROR: Install failed: {}\n", e));
             send_log(log_tx, "   Please run the install command manually in a terminal.\n\n");
             return;
         }
 
-        send_log(log_tx, "✓ Install completed.\n\n");
+        send_log(log_tx, "OK: Install completed.\n\n");
         match check_moveit_available(&build_root, &install_env) {
             Ok(check) if check.moveit_found => {
                 chosen = Some(install_env);
             }
             _ => {
-                send_log(log_tx, "❌ MoveIt Setup Assistant still not found.\n");
+                send_log(log_tx, "ERROR: MoveIt Setup Assistant still not found.\n");
                 send_log(log_tx, "   Please verify your ROS setup and MoveIt installation.\n\n");
                 return;
             }
@@ -360,7 +360,7 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
     }
 
     let ros_env = chosen.unwrap();
-    send_log(log_tx, &format!("✓ Using ROS 2 {}.\n\n", ros_env.distro));
+    send_log(log_tx, &format!("OK: Using ROS 2 {}.\n\n", ros_env.distro));
 
     send_log(log_tx, "  Launching MoveIt Setup Assistant...\n");
     send_log(log_tx, "  (Sourcing /opt/ros and workspace install if present)\n");
@@ -378,25 +378,25 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
 
     match run_command_streaming(log_tx, moveit_cmd) {
         Ok(()) => {
-            send_log(log_tx, "✓ MoveIt Setup Assistant closed.\n\n");
+            send_log(log_tx, "OK: MoveIt Setup Assistant closed.\n\n");
         }
         Err(e) => {
-            send_log(log_tx, &format!("❌ MoveIt Setup Assistant failed: {}\n\n", e));
+            send_log(log_tx, &format!("ERROR: MoveIt Setup Assistant failed: {}\n\n", e));
             return;
         }
     }
 
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+    send_log(log_tx, "----------------------------------------\n");
     send_log(log_tx, "  STEP 3: Patch MoveIt Config\n");
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n");
+    send_log(log_tx, "----------------------------------------\n\n");
 
     let config_pkg = match find_config_package(&build_root) {
         Some(pkg) => {
-            send_log(log_tx, &format!("✓ Found config package: {}\n", pkg.display()));
+            send_log(log_tx, &format!("OK: Found config package: {}\n", pkg.display()));
             pkg
         }
         None => {
-            send_log(log_tx, "⚠ MoveIt config package not found.\n");
+            send_log(log_tx, "WARN: MoveIt config package not found.\n");
             send_log(log_tx, "   Make sure you generated a config package in the Setup Assistant.\n");
             send_log(log_tx, "   Then re-run this wizard.\n\n");
             return;
@@ -405,53 +405,53 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
 
     let overlay = match ensure_overlay_config_dir(&build_root) {
         Ok(dir) => {
-            send_log(log_tx, &format!("✓ Play package: {}\n", dir.play_pkg.display()));
-            send_log(log_tx, &format!("✓ Overlay config: {}\n", dir.config_dir.display()));
+            send_log(log_tx, &format!("OK: Play package: {}\n", dir.play_pkg.display()));
+            send_log(log_tx, &format!("OK: Overlay config: {}\n", dir.config_dir.display()));
             dir
         }
         Err(e) => {
-            send_log(log_tx, &format!("❌ {}\n", e));
+            send_log(log_tx, &format!("ERROR: {}\n", e));
             return;
         }
     };
 
     send_log(log_tx, "\n  3.1 Joint Limits\n");
     if let Some(jl_file) = find_joint_limits(&config_pkg) {
-        send_log(log_tx, &format!("  ✓ Found: {}\n", jl_file.file_name().unwrap().to_string_lossy()));
+        send_log(log_tx, &format!("  OK: Found: {}\n", jl_file.file_name().unwrap().to_string_lossy()));
         match copy_to_overlay(&jl_file, &overlay.config_dir) {
             Ok(dest) => {
-                send_log(log_tx, &format!("  → Copied to: {}\n", dest.display()));
+                send_log(log_tx, &format!("  -> Copied to: {}\n", dest.display()));
                 match patch_joint_limits(&dest) {
-                    Ok(msg) => send_log(log_tx, &format!("  ✓ {}\n", msg)),
-                    Err(e) => send_log(log_tx, &format!("  ❌ {}\n", e)),
+                    Ok(msg) => send_log(log_tx, &format!("  OK: {}\n", msg)),
+                    Err(e) => send_log(log_tx, &format!("  ERROR: {}\n", e)),
                 }
             }
-            Err(e) => send_log(log_tx, &format!("  ❌ {}\n", e)),
+            Err(e) => send_log(log_tx, &format!("  ERROR: {}\n", e)),
         }
     } else {
-        send_log(log_tx, "  ⚠ joint_limits.yaml not found\n");
+        send_log(log_tx, "  WARN: joint_limits.yaml not found\n");
     }
 
     send_log(log_tx, "\n  3.2 Controllers\n");
     if let Some(ctrl_file) = find_controller_config(&config_pkg) {
-        send_log(log_tx, &format!("  ✓ Found: {}\n", ctrl_file.file_name().unwrap().to_string_lossy()));
+        send_log(log_tx, &format!("  OK: Found: {}\n", ctrl_file.file_name().unwrap().to_string_lossy()));
         match copy_to_overlay(&ctrl_file, &overlay.config_dir) {
             Ok(dest) => {
-                send_log(log_tx, &format!("  → Copied to: {}\n", dest.display()));
+                send_log(log_tx, &format!("  -> Copied to: {}\n", dest.display()));
                 match patch_controller_config(&dest) {
-                    Ok(msg) => send_log(log_tx, &format!("  ✓ {}\n", msg)),
-                    Err(e) => send_log(log_tx, &format!("  ❌ {}\n", e)),
+                    Ok(msg) => send_log(log_tx, &format!("  OK: {}\n", msg)),
+                    Err(e) => send_log(log_tx, &format!("  ERROR: {}\n", e)),
                 }
             }
-            Err(e) => send_log(log_tx, &format!("  ❌ {}\n", e)),
+            Err(e) => send_log(log_tx, &format!("  ERROR: {}\n", e)),
         }
     } else {
-        send_log(log_tx, "  ⚠ moveit_controllers.yaml not found\n");
+        send_log(log_tx, "  WARN: moveit_controllers.yaml not found\n");
     }
 
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-    send_log(log_tx, "  ✅ DONE\n");
-    send_log(log_tx, "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n");
+    send_log(log_tx, "----------------------------------------\n");
+    send_log(log_tx, "  DONE\n");
+    send_log(log_tx, "----------------------------------------\n\n");
     send_log(log_tx, "More steps can be added later.\n");
 }
 

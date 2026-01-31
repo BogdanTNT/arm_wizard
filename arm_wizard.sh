@@ -56,25 +56,25 @@ NC='\033[0m' # No Color
 
 print_header() {
     echo ""
-    echo -e "${BLUE}╔════════════════════════════════════════════════════════════════╗${NC}"
-    echo -e "${BLUE}║${NC}${BOLD}                    🤖 ARM WIZARD 🤖                           ${NC}${BLUE}║${NC}"
-    echo -e "${BLUE}║${NC}           Robot Arm Configuration Helper                       ${BLUE}║${NC}"
-    echo -e "${BLUE}╚════════════════════════════════════════════════════════════════╝${NC}"
+    echo -e "${BLUE}==============================================================${NC}"
+    echo -e "${BOLD}                         ARM WIZARD                           ${NC}"
+    echo -e "                 Robot Arm Configuration Helper               "
+    echo -e "${BLUE}==============================================================${NC}"
     echo ""
 }
 
 print_step() {
     echo ""
-    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${CYAN}--------------------------------------------------------------${NC}"
     echo -e "${BOLD}  STEP $1: $2${NC}"
-    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo -e "${CYAN}--------------------------------------------------------------${NC}"
     echo ""
 }
 
-info()    { echo -e "${BLUE}ℹ ${NC} $*"; }
-success() { echo -e "${GREEN}✓ ${NC} $*"; }
-warn()    { echo -e "${YELLOW}⚠ ${NC} $*"; }
-error()   { echo -e "${RED}✗ ${NC} $*"; }
+info()    { echo -e "${BLUE}INFO:${NC} $*"; }
+success() { echo -e "${GREEN}OK:${NC} $*"; }
+warn()    { echo -e "${YELLOW}WARN:${NC} $*"; }
+error()   { echo -e "${RED}ERROR:${NC} $*"; }
 
 wait_for_enter() {
     echo ""
@@ -172,7 +172,7 @@ build_description() {
     
     if colcon build --packages-select "$DESCRIPTION_NAME"; then
         echo ""
-        success "Build completed successfully! 🎉"
+        success "Build completed successfully."
         info ""
         info "To visualize your robot, run:"
         echo -e "    ${CYAN}source install/setup.bash${NC}"
@@ -191,7 +191,7 @@ check_moveit_config() {
     
     if [[ -z "$MOVEIT_CONFIG_PKG" ]]; then
         echo ""
-        warn "MoveIt configuration not found! 😊"
+        warn "MoveIt configuration not found."
         echo ""
         info "No worries! You just need to create it first."
         info ""
@@ -207,9 +207,9 @@ check_moveit_config() {
         echo -e "     ${CYAN}ros2 launch moveit_setup_assistant setup_assistant.launch.py${NC}"
         echo ""
         echo -e "  ${BOLD}4.${NC} In the Setup Assistant:"
-        echo -e "     • Load your URDF from: ${CYAN}$DESCRIPTION_PKG/urdf/${NC}"
-        echo -e "     • Configure your planning groups, end effectors, etc."
-        echo -e "     • Generate the MoveIt config package"
+        echo -e "     - Load your URDF from: ${CYAN}$DESCRIPTION_PKG/urdf/${NC}"
+        echo -e "     - Configure your planning groups, end effectors, etc."
+        echo -e "     - Generate the MoveIt config package"
         echo ""
         info "Once you've created the MoveIt config, run this wizard again!"
         echo ""
@@ -224,11 +224,11 @@ check_moveit_config() {
     info "Config files found:"
     for f in "$MOVEIT_CONFIG_PKG/config"/*.yaml; do
         if [[ -f "$f" ]]; then
-            echo "    • $(basename "$f")"
+            echo "    - $(basename "$f")"
         fi
     done
     
-    success "MoveIt configuration looks good! ✨"
+    success "MoveIt configuration looks good."
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -261,10 +261,10 @@ patch_joint_limits() {
     success "Found: $(basename "$joint_limits_file")"
     info ""
     info "This step will ensure each joint has:"
-    echo "    • ${BOLD}has_velocity_limits: true${NC}"
-    echo "    • ${BOLD}has_acceleration_limits: true${NC}"
-    echo "    • ${BOLD}max_acceleration${NC} set equal to ${BOLD}max_velocity${NC}"
-    echo "    • All values as ${BOLD}floats${NC} (e.g., 1.0 not 1)"
+    echo "    - ${BOLD}has_velocity_limits: true${NC}"
+    echo "    - ${BOLD}has_acceleration_limits: true${NC}"
+    echo "    - ${BOLD}max_acceleration${NC} set equal to ${BOLD}max_velocity${NC}"
+    echo "    - All values as ${BOLD}floats${NC} (e.g., 1.0 not 1)"
     echo ""
     info "A backup will be created before making changes."
     echo ""
@@ -327,19 +327,19 @@ for joint_name, values in jl.items():
     if values.get('max_acceleration') != vel_f:
         values['max_acceleration'] = vel_f
         changed = True
-        print(f"  • {joint_name}: max_acceleration = {vel_f}")
+        print(f"  - {joint_name}: max_acceleration = {vel_f}")
     
     # Enable velocity limits
     if values.get('has_velocity_limits') is not True:
         values['has_velocity_limits'] = True
         changed = True
-        print(f"  • {joint_name}: has_velocity_limits = true")
+        print(f"  - {joint_name}: has_velocity_limits = true")
     
     # Enable acceleration limits
     if values.get('has_acceleration_limits') is not True:
         values['has_acceleration_limits'] = True
         changed = True
-        print(f"  • {joint_name}: has_acceleration_limits = true")
+        print(f"  - {joint_name}: has_acceleration_limits = true")
 
 if changed:
     with open(file_path, 'w') as f:
@@ -351,7 +351,7 @@ else:
 PYTHON_SCRIPT
     
     echo ""
-    success "Joint limits patching complete! ✨"
+    success "Joint limits patching complete."
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -393,8 +393,8 @@ patch_controllers() {
     success "Found: $(basename "$controller_file")"
     info ""
     info "This step will add to each FollowJointTrajectory controller:"
-    echo "    • ${BOLD}action_ns: follow_joint_trajectory${NC}"
-    echo "    • ${BOLD}default: true${NC} (on the first controller)"
+    echo "    - ${BOLD}action_ns: follow_joint_trajectory${NC}"
+    echo "    - ${BOLD}default: true${NC} (on the first controller)"
     echo ""
     info "A backup will be created before making changes."
     echo ""
@@ -472,14 +472,14 @@ for i, name in enumerate(controller_names):
     if ctrl.get('action_ns') != 'follow_joint_trajectory':
         ctrl['action_ns'] = 'follow_joint_trajectory'
         changed = True
-        print(f"  • {name}: action_ns = follow_joint_trajectory")
+        print(f"  - {name}: action_ns = follow_joint_trajectory")
     
     # Set first controller as default if none set
     if not default_set and i == 0:
         ctrl['default'] = True
         default_set = True
         changed = True
-        print(f"  • {name}: default = true")
+        print(f"  - {name}: default = true")
     
     mgr[name] = ctrl
 
@@ -493,7 +493,7 @@ else:
 PYTHON_SCRIPT
     
     echo ""
-    success "Controller patching complete! ✨"
+    success "Controller patching complete."
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -501,11 +501,11 @@ PYTHON_SCRIPT
 # ─────────────────────────────────────────────────────────────────────────────
 show_completion() {
     echo ""
-    echo -e "${GREEN}╔════════════════════════════════════════════════════════════════╗${NC}"
-    echo -e "${GREEN}║${NC}${BOLD}                    ✅ ALL DONE! ✅                             ${NC}${GREEN}║${NC}"
-    echo -e "${GREEN}╚════════════════════════════════════════════════════════════════╝${NC}"
+    echo -e "${GREEN}==============================================================${NC}"
+    echo -e "${BOLD}                           ALL DONE                           ${NC}"
+    echo -e "${GREEN}==============================================================${NC}"
     echo ""
-    info "Your robot arm is now configured! 🤖"
+    info "Your robot arm is now configured."
     echo ""
     info "Next steps:"
     echo ""
@@ -519,7 +519,7 @@ show_completion() {
     echo -e "  ${BOLD}3.${NC} Launch MoveIt:"
     echo -e "     ${CYAN}ros2 launch $MOVEIT_CONFIG_NAME demo.launch.py${NC}"
     echo ""
-    info "Happy robotics! 🎉"
+    info "Happy robotics."
     echo ""
 }
 
