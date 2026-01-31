@@ -223,17 +223,34 @@ fn run_wizard(log_tx: &Sender<LogEvent>, workspace: Option<PathBuf>) {
     send_log(log_tx, "  STEP 1: Build Project\n");
     send_log(log_tx, "----------------------------------------\n\n");
     send_log(log_tx, "  Building...\n");
-    
+
     let mut cmd = Command::new("colcon");
     cmd.arg("build").current_dir(&build_root);
-    let cfg_pkgs = find_moveit_config_packages_to_skip(&build_root);
-    if !cfg_pkgs.is_empty() {
-        send_log(log_tx, "  Skipping MoveIt config packages:\n");
-        for pkg in &cfg_pkgs {
-            if let Some(name) = pkg.file_name().and_then(|n| n.to_str()) {
-                send_log(log_tx, &format!("    - {}\n", name));
-                cmd.args(["--packages-skip", name]);
+
+    let mut selected: Vec<String> = Vec::new();
+    if let Some(desc_pkg) = find_description_package(&build_root) {
+        if let Some(name) = desc_pkg.file_name().and_then(|n| n.to_str()) {
+            selected.push(name.to_string());
+        }
+    }
+    if let Some(play_pkg) = find_play_package(&build_root) {
+        if let Some(name) = play_pkg.file_name().and_then(|n| n.to_str()) {
+            if !selected.contains(&name.to_string()) {
+                selected.push(name.to_string());
             }
+        }
+    }
+
+    if selected.is_empty() {
+        send_log(log_tx, "WARN: No description/play packages found; building all packages.\n");
+    } else {
+        send_log(log_tx, "  Building packages:\n");
+        for name in &selected {
+            send_log(log_tx, &format!("    - {}\n", name));
+        }
+        cmd.arg("--packages-select");
+        for name in &selected {
+            cmd.arg(name);
         }
     }
     match run_command_streaming(log_tx, cmd) {
@@ -621,7 +638,7 @@ fn find_play_package(root: &Path) -> Option<PathBuf> {
 }
 
 fn find_description_package(root: &Path) -> Option<PathBuf> {
-    for entry in WalkDir::new(root).max_depth(2).into_iter().filter_map(|e| e.ok()) {
+    for entry in WalkDir::new(root).max_depth(4).into_iter().filter_map(|e| e.ok()) {
         let path = entry.path();
         if path.file_name().map(|n| n == "package.xml").unwrap_or(false) {
             let parent = path.parent()?;
